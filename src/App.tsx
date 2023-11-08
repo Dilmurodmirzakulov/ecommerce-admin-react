@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './pages/login';
+import Home from './pages';
+import MainLayout from './layout/mainLayout';
+import RequireAuth from './routes/RequireAuth';
+import Product from './pages/product/[id]';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* public routes */}
+        <Route path="/login" element={<Login />} />
+
+        {/* we want to protect these routes */}
+        <Route element={<RequireAuth />}>
+          <Route path="/" element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:id" element={<Product />} />
+          </Route>
+        </Route>
+
+        {/* catch all */}
+        {/* <Route path="/" element={<Layout />}>
+          <Route path="*" element={<PageNotFound />} />
+        </Route> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

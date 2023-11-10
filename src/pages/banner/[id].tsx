@@ -25,42 +25,42 @@ const Banner = () => {
           <div className="row g-3 mb-4">
             <div className="col-12">
               <label className="form-label">Nomi *</label>
-              <input type="text" className="form-control" id="productNameInput" placeholder="Mahsulot nomi"
+              <input type="text" className="form-control" id="productNameInput" placeholder="Banner nomi"
                 aria-describedby="defaultFormControlHelp" />
               {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div> */}
             </div>
             <div className="col-12">
               <label className="form-label">TAVSIFI</label>
               <textarea className="form-control" name="dsfs" id="productDescInput" 
-                placeholder="Mahsulot tavsifi"></textarea>
+                placeholder="Banner tavsifi"></textarea>
               {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
           </div>
           <div className="row g-3 mb-4">
             <div className="col-12">
               <label className="form-label">ИМЯ *</label>
-              <input type="text" className="form-control" id="productNameInput" placeholder="Наименование товара"
+              <input type="text" className="form-control" id="productNameInput" placeholder="Название баннера"
                 aria-describedby="defaultFormControlHelp" />
               {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div> */}
             </div>
             <div className="col-12">
               <label className="form-label">Описание</label>
               <textarea className="form-control" name="dsfs" id="productDescInput" 
-                placeholder="Описание продукта"></textarea>
+                placeholder="Описание баннера"></textarea>
               {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
           </div>
           <div className="row g-3">
             <div className="col-12">
               <label className="form-label">Name *</label>
-              <input type="text" className="form-control" id="productNameInput" placeholder="Product Name"
+              <input type="text" className="form-control" id="productNameInput" placeholder="Banner name"
                 aria-describedby="defaultFormControlHelp" />
               {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
             <div className="col-12">
               <label className="form-label">Description</label>
               <textarea className="form-control" name="dsfs" id="productDescInput" 
-                placeholder="Product Description"></textarea>
+                placeholder="Banner description"></textarea>
               {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div> */}
             </div>
           </div>

@@ -33,7 +33,7 @@ const Orders = () => {
                 <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>OR239233</td>
+                    <td><Link to={'/order/123'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-danger">Cancelled</span></td>
                     <td>1595.35</td>
@@ -45,7 +45,7 @@ const Orders = () => {
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td>OR239233</td>
+                    <td><Link to={'/order/123'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-warning">Processing</span></td>
                     <td>1595.35</td>
@@ -57,7 +57,7 @@ const Orders = () => {
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td>OR239233</td>
+                    <td><Link to={'/order/123'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-dark">New</span></td>
                     <td>1595.35</td>
@@ -69,7 +69,7 @@ const Orders = () => {
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td>OR239233</td>
+                    <td><Link to={'/order/123'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-success">Delivered</span></td>
                     <td>1595.35</td>
@@ -81,7 +81,7 @@ const Orders = () => {
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td>OR239233</td>
+                    <td><Link to={'/order/123'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-success">Shipped</span></td>
                     <td>1595.35</td>

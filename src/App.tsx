@@ -15,6 +15,10 @@ import Customers from './pages/customers';
 import Customer from './pages/customer/[id]';
 import Orders from './pages/orders';
 import Order from './pages/order/[id]';
+import Banners from './pages/banners';
+import Banner from './pages/banner/[id]';
+import Contacts from './pages/contacts';
+import Contact from './pages/contact/[id]';
 
 function App() {
   return (
@@ -33,6 +37,10 @@ function App() {
             <Route path="/customer/:id" element={<Customer />} />
             <Route path="/order" element={<Orders />} />
             <Route path="/order/:id" element={<Order />} />
+            <Route path="/banner" element={<Banners />} />
+            <Route path="/banner/:id" element={<Banner />} />
+            <Route path="/contact" element={<Contacts />} />
+            <Route path="/contact/:id" element={<Contact />} />
           </Route>
         </Route>
 

@@ -53,7 +53,7 @@ const Home = () => {
               <tr>
                 <th scope="row">1</th>
                 <td>Mark</td>
-                <td>PRODUCT NAME</td>
+                <td><Link to={'/product/123'}>PRODUCT NAME</Link></td>
                 <td>PRICE</td>
                 <td>
                   <div className="badge badge-center rounded-pill bg-label-danger">
@@ -67,7 +67,7 @@ const Home = () => {
               <tr>
                 <th scope="row">2</th>
                 <td>Mark</td>
-                <td>PRODUCT NAME</td>
+                <td><Link to={'/product/123'}>PRODUCT NAME</Link></td>
                 <td>PRICE</td>
                 <td>
                   <div className="badge badge-center rounded-pill bg-label-success">

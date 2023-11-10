@@ -10,7 +10,7 @@ export interface SliderData {
     discount: number;
     count: number;
 }
-  
+
 export interface ErrorResponse {
     message: string;
 }

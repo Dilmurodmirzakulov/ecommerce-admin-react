@@ -1,4 +1,4 @@
-import api from "../api"
+import api from '../api';
 import { SliderData } from "./sliderTypes"
 import { ErrorResponse } from "react-router-dom"
 

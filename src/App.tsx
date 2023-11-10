@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import "boxicons/css/boxicons.min.css";
 import './assets/css/core.css';
 import './assets/css/custom.css';
 import './assets/css/demo.css';

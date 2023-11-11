@@ -1,6 +1,6 @@
+import { getSlider } from '../api';
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import { getSlider } from '../api';
 
 const Banners = () => {
     const fetchBanners = async () => {

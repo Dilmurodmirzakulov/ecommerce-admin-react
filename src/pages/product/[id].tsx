@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
-const Product = () => {
+const Product = ({ mode }: { mode: string }) => {
+  console.log("mode", mode)
   const { id } = useParams();
   let navigate = useNavigate();
   return (
@@ -9,13 +10,18 @@ const Product = () => {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item"><Link to={'/product'}>Products</Link></li>
-          <li className="breadcrumb-item"><Link to={'/product/123'}>PRODUCT_NAME</Link></li>
-          <li className="breadcrumb-item active" aria-current="page">Edit</li>
+          {mode === "create" && <li className="breadcrumb-item active" aria-current="page">Create</li>}
+          {mode === "edit" &&
+            <>
+              <li className="breadcrumb-item"><Link to={'/product/123'}>PRODUCT_NAME</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">Edit</li>
+            </>
+          }
         </ol>
       </nav>
       <div className="mb-4 d-flex align-items-center justify-content-between">
         <h4 className="fw-bold mb-0">PRODUCT_NAME</h4>
-        <button className="btn btn-danger">Delete</button>
+        {mode === "edit" && <button className="btn btn-danger">Delete</button>}
       </div>
 
       <div className="card mb-4">
@@ -39,7 +45,7 @@ const Product = () => {
             </div>
             <div className="col-12">
               <label className="form-label">TAVSIFI</label>
-              <textarea className="form-control" name="dsfs" id="productDescInput" 
+              <textarea className="form-control" name="dsfs" id="productDescInput"
                 placeholder="Mahsulot tavsifi"></textarea>
               {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
@@ -59,7 +65,7 @@ const Product = () => {
             </div>
             <div className="col-12">
               <label className="form-label">Описание</label>
-              <textarea className="form-control" name="dsfs" id="productDescInput" 
+              <textarea className="form-control" name="dsfs" id="productDescInput"
                 placeholder="Описание продукта"></textarea>
               {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
@@ -79,7 +85,7 @@ const Product = () => {
             </div>
             <div className="col-12">
               <label className="form-label">Description</label>
-              <textarea className="form-control" name="dsfs" id="productDescInput" 
+              <textarea className="form-control" name="dsfs" id="productDescInput"
                 placeholder="Product Description"></textarea>
               {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div> */}
             </div>

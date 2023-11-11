@@ -1,4 +1,4 @@
-import { getSlider } from '../api';
+import { getSlider } from '../../api';
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ const Banners = () => {
     useEffect(() => {
         fetchBanners()
     }, [])
-    
+
     return (
         <>
             <nav aria-label="breadcrumb">

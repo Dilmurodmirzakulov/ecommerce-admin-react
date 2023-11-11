@@ -10,14 +10,14 @@ import Home from './pages';
 import MainLayout from './layout/mainLayout';
 import RequireAuth from './routes/RequireAuth';
 import Product from './pages/product/[id]';
-import Products from './pages/products';
-import Customers from './pages/customers';
+import Products from './pages/product';
+import Customers from './pages/customer';
 import Customer from './pages/customer/[id]';
-import Orders from './pages/orders';
+import Orders from './pages/order';
 import Order from './pages/order/[id]';
-import Banners from './pages/banners';
+import Banners from './pages/banner';
 import Banner from './pages/banner/[id]';
-import Contacts from './pages/contacts';
+import Contacts from './pages/contact';
 import Contact from './pages/contact/[id]';
 
 function App() {
@@ -32,7 +32,8 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/product" element={<Products />} />
-            <Route path="/product/:id" element={<Product />} />
+            <Route path="/product/new" element={<Product mode="create" />} />
+            <Route path="/product/:id/edit" element={<Product mode="edit" />} />
             <Route path="/customer" element={<Customers />} />
             <Route path="/customer/:id" element={<Customer />} />
             <Route path="/order" element={<Orders />} />

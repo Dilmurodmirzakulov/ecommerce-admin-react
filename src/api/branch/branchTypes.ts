@@ -1,7 +1,3 @@
-export interface SliderData {
+export interface BranchData {
     name: string;
-}
-
-export interface ErrorResponse {
-    message: string;
 }

@@ -1,20 +1,20 @@
-// import { getBranch } from '../api';
-import React, { useEffect } from 'react';
+import { getBranch } from '../api';
 import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
 const Contacts = () => {
-    // const fetchBranches = async () => {
-    //     try {
-    //         let res = await getBranch()
-    //         console.log("Branches", res)
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
-    // }
+    const fetchBranches = async () => {
+        try {
+            let res = await getBranch()
+            console.log("Branches", res)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
-    // useEffect(() => {
-    //     fetchBranches()
-    // }, [])
+    useEffect(() => {
+        fetchBranches()
+    }, [])
 
   return (
     <>

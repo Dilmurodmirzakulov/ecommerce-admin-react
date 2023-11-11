@@ -1,7 +1,21 @@
-import React from 'react';
+import { getProduct } from '../api';
 import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
 const Products = () => {
+    const fetchProducts = async () => {
+        try {
+            let res = await getProduct("uz")
+            console.log("Products", res)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        fetchProducts()
+    }, [])
+
   return (
     <>
         <nav aria-label="breadcrumb">

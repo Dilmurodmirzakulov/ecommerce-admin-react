@@ -6,7 +6,7 @@ const Banners = () => {
     const fetchBanners = async () => {
         try {
             let res = await getSlider("uz")
-            console.log(res)
+            console.log("Banners", res)
         } catch (error) {
             console.log(error)
         }
@@ -15,6 +15,7 @@ const Banners = () => {
     useEffect(() => {
         fetchBanners()
     }, [])
+    
     return (
         <>
             <nav aria-label="breadcrumb">

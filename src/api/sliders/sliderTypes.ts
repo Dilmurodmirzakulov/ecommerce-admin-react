@@ -6,6 +6,8 @@ export interface SliderData {
   description_ru: string;
   description_eng: string;
   image: string;
+  image_ru: string;
+  image_eng: string;
 }
 
 export interface ErrorResponse {

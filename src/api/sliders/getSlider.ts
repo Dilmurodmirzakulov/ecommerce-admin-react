@@ -1,6 +1,6 @@
 import api from '../api';
-import { SliderData } from "./sliderTypes"
-import { ErrorResponse } from "react-router-dom"
+import { SliderData } from "./sliderTypes";
+import { ErrorResponse } from "react-router-dom";
 
 export const getSlider = async (lang: string): Promise<SliderData | ErrorResponse> => {
   try {

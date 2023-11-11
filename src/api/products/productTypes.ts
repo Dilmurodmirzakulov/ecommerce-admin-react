@@ -1,4 +1,4 @@
-export interface SliderData {
+export interface ProductData {
     name: string;
     name_ru: string;
     name_eng: string;
@@ -9,8 +9,6 @@ export interface SliderData {
     price: number;
     discount: number;
     count: number;
+    soldout: number;
 }
 
-export interface ErrorResponse {
-    message: string;
-}

@@ -19,6 +19,8 @@ import Banners from './pages/banner';
 import Banner from './pages/banner/[id]';
 import Contacts from './pages/contact';
 import Contact from './pages/contact/[id]';
+import Payments from './pages/payment';
+import Payment from './pages/payment/[id]';
 
 function App() {
   return (
@@ -46,6 +48,9 @@ function App() {
             <Route path="/contact" element={<Contacts />} />
             <Route path="/contact/new" element={<Contact mode="create" />} />
             <Route path="/contact/:id/edit" element={<Contact mode="edit" />} />
+            <Route path="/payment" element={<Payments />} />
+            <Route path="/payment/new" element={<Payment mode="create" />} />
+            <Route path="/payment/:id/edit" element={<Payment mode="edit" />} />
           </Route>
         </Route>
 

@@ -54,8 +54,14 @@ const AsideNav = () => {
           </li>
           <li className={`menu-item ${pathname.includes("/contact") && "active"}`}>
             <Link to={'/contact'} className="menu-link">
-              <i className='menu-icon tf-icons bx bx-package'></i>
+              <i className='menu-icon tf-icons bx bx-phone-call'></i>
               <div data-i18n="Boxicons">Contacts</div>
+            </Link>
+          </li>
+          <li className={`menu-item ${pathname.includes("/payment") && "active"}`}>
+            <Link to={'/payment'} className="menu-link">
+              <i className='menu-icon tf-icons bx bx-money'></i>
+              <div data-i18n="Boxicons">Payments</div>
             </Link>
           </li>
           <li className={`menu-item ${pathname.includes("/authors") && "active"}`}>

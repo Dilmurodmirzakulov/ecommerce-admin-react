@@ -24,6 +24,7 @@ const Contacts = () => {
                     <li className="breadcrumb-item active" aria-current="page">List</li>
                 </ol>
             </nav>
+
             <div className="mb-4 d-flex align-items-center justify-content-between">
                 <h4 className="fw-bold mb-0">Contacts</h4>
                 <Link to={'/contact/new'} className="btn btn-primary">Create contact</Link>
@@ -57,4 +58,4 @@ const Contacts = () => {
     )
 }
 
-export default Contacts
+export default Contacts;

@@ -10,6 +10,7 @@ const Orders = () => {
                 <li className="breadcrumb-item active" aria-current="page">List</li>
             </ol>
         </nav>
+        
         <div className="mb-4 d-flex align-items-center justify-content-between">
             <h4 className="fw-bold mb-0">Orders</h4>
             <Link to={"/order/new"} className="btn btn-primary">Create order</Link>

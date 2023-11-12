@@ -16,10 +16,12 @@ const Banner = ({ mode }: { mode: string }) => {
           }
         </ol>
       </nav>
+
       <div className="mb-4 d-flex align-items-center justify-content-between">
         {mode === "edit" && <h4 className="fw-bold mb-0">BANNER_NAME</h4>}
         {mode === "edit" && <button className="btn btn-danger">Delete</button>}
       </div>
+      
       <div className="card mb-4">
         <div className="card-body">
           <div className="form-check form-switch mb-2">

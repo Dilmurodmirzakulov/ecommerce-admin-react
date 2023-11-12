@@ -24,6 +24,7 @@ const Products = () => {
                     <li className="breadcrumb-item active" aria-current="page">List</li>
                 </ol>
             </nav>
+            
             <div className="mb-4 d-flex align-items-center justify-content-between">
                 <h4 className="fw-bold mb-0">Products</h4>
                 <Link to={"/product/new"} className="btn btn-primary">Create product</Link>

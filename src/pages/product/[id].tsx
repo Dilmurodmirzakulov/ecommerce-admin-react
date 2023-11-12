@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Product = ({ mode }: { mode: string }) => {
-  console.log("mode", mode)
   return (
     <>
       <nav aria-label="breadcrumb">
@@ -17,6 +16,7 @@ const Product = ({ mode }: { mode: string }) => {
           }
         </ol>
       </nav>
+
       <div className="mb-4 d-flex align-items-center justify-content-between">
         {mode === "edit" && <h4 className="fw-bold mb-0">PRODUCT_NAME</h4>}
         {mode === "edit" && <button className="btn btn-danger">Delete</button>}
@@ -111,4 +111,4 @@ const Product = ({ mode }: { mode: string }) => {
   )
 }
 
-export default Product
+export default Product;

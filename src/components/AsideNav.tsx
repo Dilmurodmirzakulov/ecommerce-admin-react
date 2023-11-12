@@ -11,10 +11,6 @@ const AsideNav = () => {
               BOY TOYS
             </span>
           </Link>
-
-          {/* <a href="javascript:void(0);" className="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-            <i className="bx bx-chevron-left bx-sm align-middle"></i>
-          </a> */}
         </div>
 
         <div className="menu-inner-shadow"></div>

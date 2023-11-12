@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Customer = ({ mode }: { mode: string }) => {
-    console.log("mode", mode)
     return (
         <>
             <nav aria-label="breadcrumb">
@@ -17,6 +16,7 @@ const Customer = ({ mode }: { mode: string }) => {
                     }
                 </ol>
             </nav>
+
             <div className="mb-4 d-flex align-items-center justify-content-between">
                 {mode === "edit" && <h4 className="fw-bold mb-0">CUSTOMER_NAME</h4>}
                 {mode === "edit" && <button className="btn btn-danger">Delete</button>}
@@ -51,6 +51,7 @@ const Customer = ({ mode }: { mode: string }) => {
                         </div>
                     </div>
                 </div>
+                
                 <div className="col-md-4">
                     <div className="card">
                         <div className="card-body">
@@ -76,7 +77,7 @@ const Customer = ({ mode }: { mode: string }) => {
                 <div className="card-body">
                     <div className="d-flex align-items-center justify-content-between mb-3">
                         <h5 className="mb-0">Addresses</h5>
-                        <button className="btn btn-success">Add address</button>
+                        <Link to={"/customer/123/address/new"} className="btn btn-success">Add address</Link>
                     </div>
                     <table className="table table-striped table-bordered">
                         <thead>
@@ -91,9 +92,9 @@ const Customer = ({ mode }: { mode: string }) => {
                                 <th scope="row">1</th>
                                 <td>13 Muhammadniyoz str, Tashkent city, Uzbekistan</td>
                                 <td>
-                                    <button className="btn btn-icon btn-warning me-2">
+                                    <Link to={"/customer/123/address/456/edit"} className="btn btn-icon btn-warning me-2">
                                         <i className='bx bx-pencil'></i>
-                                    </button>
+                                    </Link>
                                     <button className="btn btn-icon btn-danger">
                                         <i className='bx bx-trash'></i>
                                     </button>
@@ -103,9 +104,9 @@ const Customer = ({ mode }: { mode: string }) => {
                                 <th scope="row">2</th>
                                 <td>13 Muhammadniyoz str, Tashkent city, Uzbekistan</td>
                                 <td>
-                                    <button className="btn btn-icon btn-warning me-2">
+                                    <Link to={"/customer/123/address/456/edit"} className="btn btn-icon btn-warning me-2">
                                         <i className='bx bx-pencil'></i>
-                                    </button>
+                                    </Link>
                                     <button className="btn btn-icon btn-danger">
                                         <i className='bx bx-trash'></i>
                                     </button>

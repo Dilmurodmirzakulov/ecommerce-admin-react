@@ -1,6 +1,6 @@
 import { getSlider } from '../../api';
-import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
 const Banners = () => {
     const fetchBanners = async () => {
@@ -24,6 +24,7 @@ const Banners = () => {
                     <li className="breadcrumb-item active" aria-current="page">List</li>
                 </ol>
             </nav>
+            
             <div className="mb-4 d-flex align-items-center justify-content-between">
                 <h4 className="fw-bold mb-0">Banners</h4>
                 <Link to={'/banner/new'} className="btn btn-primary">Create banner</Link>

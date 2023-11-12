@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Contact = ({ mode }: { mode: string }) => {
   return (
@@ -16,6 +16,7 @@ const Contact = ({ mode }: { mode: string }) => {
           }
         </ol>
       </nav>
+      
       <div className="mb-4 d-flex align-items-center justify-content-between">
         {mode === "edit" && <h4 className="fw-bold mb-0">BRANCH_NAME</h4>}
         {mode === "edit" && <button className="btn btn-danger">Delete</button>}

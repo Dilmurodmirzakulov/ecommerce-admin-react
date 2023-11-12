@@ -38,7 +38,8 @@ function App() {
             <Route path="/customer/new" element={<Customer mode="create" />} />
             <Route path="/customer/:id/edit" element={<Customer mode="edit" />} />
             <Route path="/order" element={<Orders />} />
-            <Route path="/order/:id" element={<Order />} />
+            <Route path="/order/new" element={<Order mode="create" />} />
+            <Route path="/order/:id/edit" element={<Order mode="edit" />} />
             <Route path="/banner" element={<Banners />} />
             <Route path="/banner/:id" element={<Banner />} />
             <Route path="/contact" element={<Contacts />} />

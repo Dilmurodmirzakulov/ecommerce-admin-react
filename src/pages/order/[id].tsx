@@ -1,7 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Order = () => {
+const Order = ({ mode }: { mode: string }) => {
+    console.log("mode", mode)
   return (
     <>
         <nav aria-label="breadcrumb">
@@ -9,17 +10,18 @@ const Order = () => {
                 <li className="breadcrumb-item">
                     <Link to={'/order'}>Orders</Link>
                 </li>
-                <li className="breadcrumb-item">
-                    <a href="product.html">Number</a>
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                Edit
-                </li>
+                {mode === "create" && <li className="breadcrumb-item active" aria-current="page">Create</li>}
+                {mode === "edit" &&
+                    <>
+                        <li className="breadcrumb-item"><Link to={'/order/123/edit'}>ORDER_NUMBER</Link></li>
+                        <li className="breadcrumb-item active" aria-current="page">Edit</li>
+                    </>
+                }
             </ol>
         </nav>
         <div className="mb-4 d-flex align-items-center justify-content-between">
-            <h4 className="fw-bold mb-0">Edit Number</h4>
-            <button className="btn btn-danger">Delete</button>
+            {mode === "edit" && <h4 className="fw-bold mb-0">ORDER_NUMBER</h4>}
+            {mode === "edit" && <button className="btn btn-danger">Delete</button>}
         </div>
 
         <div className="row g-3">
@@ -27,7 +29,6 @@ const Order = () => {
             <div className="card mb-4">
             <div className="card-body">
                 <div className="row g-3">
-                {/* <div className="col-md-12"></div> */}
                 <div className="col-md-6">
                     <label className="form-label">Number</label>
                     <input
@@ -36,7 +37,6 @@ const Order = () => {
                     id="customerNumberInput"
                     placeholder="Number"
                     aria-describedby="defaultFormControlHelp" />
-                    <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>
                 </div>
                 <div className="col-md-6">
                     <label className="form-label">Customer *</label>
@@ -46,7 +46,6 @@ const Order = () => {
                     id="customerFullNameInput"
                     placeholder="Customer Full Name"
                     aria-describedby="defaultFormControlHelp" />
-                    <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>
                 </div>
                 <div className="col-md-6">
                     <label className="form-label">Status</label>
@@ -56,7 +55,6 @@ const Order = () => {
                     id="orderStatusInput"
                     placeholder="Order Status"
                     aria-describedby="defaultFormControlHelp" />
-                    <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>
                 </div>
                 <div className="col-md-6">
                     <label className="form-label">Country</label>
@@ -66,7 +64,6 @@ const Order = () => {
                     id="countryInput"
                     placeholder="Country"
                     aria-describedby="defaultFormControlHelp" />
-                    <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>
                 </div>
                 <div className="col-md-12">
                     <label className="form-label">Address</label>
@@ -76,7 +73,6 @@ const Order = () => {
                     id="addressInput"
                     placeholder="Order Status"
                     aria-describedby="defaultFormControlHelp" />
-                    <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>
                 </div>
                 <div className="col-12">
                     <label className="form-label">Notes</label>
@@ -85,7 +81,6 @@ const Order = () => {
                     name="dsfs"
                     id="notesInput"
                     placeholder="Product Description"></textarea>
-                    <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>
                 </div>
                 <div className="col-md-6">
                 <label className="form-label">Address</label>

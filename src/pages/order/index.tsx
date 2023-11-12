@@ -12,7 +12,7 @@ const Orders = () => {
         </nav>
         <div className="mb-4 d-flex align-items-center justify-content-between">
             <h4 className="fw-bold mb-0">Orders</h4>
-            <button className="btn btn-warning">New order</button>
+            <Link to={"/order/new"} className="btn btn-primary">Create order</Link>
         </div>
 
         <div className="card">
@@ -33,62 +33,62 @@ const Orders = () => {
                 <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td><Link to={'/order/123'}>OR239233</Link></td>
+                    <td><Link to={'/order/123/edit'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-danger">Cancelled</span></td>
                     <td>1595.35</td>
                     <td>351.49</td>
                     <td>Jun 20, 2023</td>
                     <td>
-                    <button className="btn btn-success">Edit</button>
+                    <Link to={'/order/123/edit'} className="btn btn-success">Edit</Link>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><Link to={'/order/123'}>OR239233</Link></td>
+                    <td><Link to={'/order/123/edit'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-warning">Processing</span></td>
                     <td>1595.35</td>
                     <td>351.49</td>
                     <td>Jun 20, 2023</td>
                     <td>
-                    <button className="btn btn-success">Edit</button>
+                    <Link to={'/order/123/edit'} className="btn btn-success">Edit</Link>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><Link to={'/order/123'}>OR239233</Link></td>
+                    <td><Link to={'/order/123/edit'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-dark">New</span></td>
                     <td>1595.35</td>
                     <td>351.49</td>
                     <td>Jun 20, 2023</td>
                     <td>
-                    <button className="btn btn-success">Edit</button>
+                    <Link to={'/order/123/edit'} className="btn btn-success">Edit</Link>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><Link to={'/order/123'}>OR239233</Link></td>
+                    <td><Link to={'/order/123/edit'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-success">Delivered</span></td>
                     <td>1595.35</td>
                     <td>351.49</td>
                     <td>Jun 20, 2023</td>
                     <td>
-                    <button className="btn btn-success">Edit</button>
+                    <Link to={'/order/123/edit'} className="btn btn-success">Edit</Link>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><Link to={'/order/123'}>OR239233</Link></td>
+                    <td><Link to={'/order/123/edit'}>OR239233</Link></td>
                     <td>Ernestie Hoeger</td>
                     <td><span className="badge bg-label-success">Shipped</span></td>
                     <td>1595.35</td>
                     <td>351.49</td>
                     <td>Jun 20, 2023</td>
                     <td>
-                    <button className="btn btn-success">Edit</button>
+                    <Link to={'/order/123/edit'} className="btn btn-success">Edit</Link>
                     </td>
                 </tr>
                 </tbody>

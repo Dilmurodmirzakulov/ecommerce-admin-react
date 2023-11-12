@@ -11,7 +11,7 @@ const Customer = ({ mode }: { mode: string }) => {
                     {mode === "create" && <li className="breadcrumb-item active" aria-current="page">Create</li>}
                     {mode === "edit" &&
                         <>
-                            <li className="breadcrumb-item"><Link to={'/product/123'}>CUSTOMER_NAME</Link></li>
+                            <li className="breadcrumb-item"><Link to={'/product/123/edit'}>CUSTOMER_NAME</Link></li>
                             <li className="breadcrumb-item active" aria-current="page">Edit</li>
                         </>
                     }

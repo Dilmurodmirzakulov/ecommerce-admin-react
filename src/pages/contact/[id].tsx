@@ -1,19 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Contact = () => {
+const Contact = ({ mode }: { mode: string }) => {
   return (
     <>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item"><Link to={'/contact'}>Contacts</Link></li>
-          <li className="breadcrumb-item"><Link to={'/contact/123'}>BRANCH_NAME</Link></li>
-          <li className="breadcrumb-item active" aria-current="page">Edit</li>
+          {mode === "create" && <li className="breadcrumb-item active" aria-current="page">Create</li>}
+          {mode === "edit" &&
+            <>
+              <li className="breadcrumb-item"><Link to={'/contact/123/edit'}>BRANCH_NAME</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">Edit</li>
+            </>
+          }
         </ol>
       </nav>
       <div className="mb-4 d-flex align-items-center justify-content-between">
-        <h4 className="fw-bold mb-0">Contact</h4>
-        <button className="btn btn-danger">Delete</button>
+        {mode === "edit" && <h4 className="fw-bold mb-0">BRANCH_NAME</h4>}
+        {mode === "edit" && <button className="btn btn-danger">Delete</button>}
       </div>
 
       <div className="card mb-4">
@@ -27,13 +32,11 @@ const Contact = () => {
               <label className="form-label">Name *</label>
               <input type="text" className="form-control" id="productNameInput" placeholder="Branch name"
                 aria-describedby="defaultFormControlHelp" />
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div> */}
             </div>
             <div className="col-12">
               <label className="form-label">Phone</label>
               <textarea className="form-control" name="dsfs" id="productDescInput" 
                 placeholder="Phone number"></textarea>
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
           </div>
         </div>
@@ -41,7 +44,6 @@ const Contact = () => {
 
       <button className="btn btn-primary me-3">Save Changes</button>
       <button className="btn btn-secondary">Cancel</button>
-      {/* <button onClick={() => navigate(-1)}>Back</button> */}
     </>
   )
 }

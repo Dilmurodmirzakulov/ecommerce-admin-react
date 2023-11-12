@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Product = ({ mode }: { mode: string }) => {
   console.log("mode", mode)
-  const { id } = useParams();
-  let navigate = useNavigate();
   return (
     <>
       <nav aria-label="breadcrumb">
@@ -13,7 +11,7 @@ const Product = ({ mode }: { mode: string }) => {
           {mode === "create" && <li className="breadcrumb-item active" aria-current="page">Create</li>}
           {mode === "edit" &&
             <>
-              <li className="breadcrumb-item"><Link to={'/product/123'}>PRODUCT_NAME</Link></li>
+              <li className="breadcrumb-item"><Link to={'/product/123/edit'}>PRODUCT_NAME</Link></li>
               <li className="breadcrumb-item active" aria-current="page">Edit</li>
             </>
           }
@@ -35,19 +33,16 @@ const Product = ({ mode }: { mode: string }) => {
               <label className="form-label">Nomi *</label>
               <input type="text" className="form-control" id="productNameInput" placeholder="Mahsulot nomi"
                 aria-describedby="defaultFormControlHelp" />
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div> */}
             </div>
             <div className="col-md-6">
               <label className="form-label">Slug</label>
               <input type="text" className="form-control" id="productSlugInput" placeholder="Product Slug"
                 aria-describedby="defaultFormControlHelp" />
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
             <div className="col-12">
               <label className="form-label">TAVSIFI</label>
               <textarea className="form-control" name="dsfs" id="productDescInput"
                 placeholder="Mahsulot tavsifi"></textarea>
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
           </div>
           <div className="row g-3 mb-4">
@@ -55,19 +50,16 @@ const Product = ({ mode }: { mode: string }) => {
               <label className="form-label">ИМЯ *</label>
               <input type="text" className="form-control" id="productNameInput" placeholder="Наименование товара"
                 aria-describedby="defaultFormControlHelp" />
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div> */}
             </div>
             <div className="col-md-6">
               <label className="form-label">Slug</label>
               <input type="text" className="form-control" id="productSlugInput" placeholder="Product Slug"
                 aria-describedby="defaultFormControlHelp" />
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
             <div className="col-12">
               <label className="form-label">Описание</label>
               <textarea className="form-control" name="dsfs" id="productDescInput"
                 placeholder="Описание продукта"></textarea>
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
           </div>
           <div className="row g-3">
@@ -75,19 +67,16 @@ const Product = ({ mode }: { mode: string }) => {
               <label className="form-label">Name *</label>
               <input type="text" className="form-control" id="productNameInput" placeholder="Product Name"
                 aria-describedby="defaultFormControlHelp" />
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
             <div className="col-md-6">
               <label className="form-label">Slug</label>
               <input type="text" className="form-control" id="productSlugInput" placeholder="Product Slug"
                 aria-describedby="defaultFormControlHelp" />
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
             <div className="col-12">
               <label className="form-label">Description</label>
               <textarea className="form-control" name="dsfs" id="productDescInput"
                 placeholder="Product Description"></textarea>
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div> */}
             </div>
           </div>
         </div>
@@ -106,13 +95,11 @@ const Product = ({ mode }: { mode: string }) => {
               <label className="form-label">Price *</label>
               <input type="text" className="form-control" id="productPriceInput" placeholder="Price"
                 aria-describedby="defaultFormControlHelp" />
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
             <div className="col-md-6">
               <label className="form-label">Sale *</label>
               <input type="text" className="form-control" id="productSaleInput" placeholder="Sale persent"
                 aria-describedby="defaultFormControlHelp" />
-              {/* <div id="defaultFormControlHelp" className="form-text text-danger">We'll never share your details with anyone else.</div>  */}
             </div>
           </div>
         </div>
@@ -120,7 +107,6 @@ const Product = ({ mode }: { mode: string }) => {
 
       <button className="btn btn-primary me-3">Save Changes</button>
       <button className="btn btn-secondary">Cancel</button>
-      {/* <button onClick={() => navigate(-1)}>Back</button> */}
     </>
   )
 }

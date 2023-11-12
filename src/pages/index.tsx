@@ -27,13 +27,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <div className="col-md-6">
-          <div className="card">
-            <div className="card-body">
-
-            </div>
-          </div>
-        </div>  */}
       </div>
 
       <div className="card">
@@ -53,7 +46,7 @@ const Home = () => {
               <tr>
                 <th scope="row">1</th>
                 <td>Mark</td>
-                <td><Link to={'/product/123'}>PRODUCT NAME</Link></td>
+                <td><Link to={'/product/123/edit'}>PRODUCT NAME</Link></td>
                 <td>PRICE</td>
                 <td>
                   <div className="badge badge-center rounded-pill bg-label-danger">
@@ -61,13 +54,13 @@ const Home = () => {
                   </div>
                 </td>
                 <td>
-                  <button className="btn btn-success">Edit</button>
+                  <Link to={'/product/123/edit'} className="btn btn-success">Edit</Link>
                 </td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>Mark</td>
-                <td><Link to={'/product/123'}>PRODUCT NAME</Link></td>
+                <td><Link to={'/product/123/edit'}>PRODUCT NAME</Link></td>
                 <td>PRICE</td>
                 <td>
                   <div className="badge badge-center rounded-pill bg-label-success">
@@ -75,7 +68,7 @@ const Home = () => {
                   </div>
                 </td>
                 <td>
-                  <button className="btn btn-success">Edit</button>
+                  <Link to={'/product/123/edit'} className="btn btn-success">Edit</Link>
                 </td>
               </tr>
             </tbody>

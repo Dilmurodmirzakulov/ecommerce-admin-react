@@ -41,9 +41,11 @@ function App() {
             <Route path="/order/new" element={<Order mode="create" />} />
             <Route path="/order/:id/edit" element={<Order mode="edit" />} />
             <Route path="/banner" element={<Banners />} />
-            <Route path="/banner/:id" element={<Banner />} />
+            <Route path="/banner/new" element={<Banner mode="create" />} />
+            <Route path="/banner/:id/edit" element={<Banner mode="edit" />} />
             <Route path="/contact" element={<Contacts />} />
-            <Route path="/contact/:id" element={<Contact />} />
+            <Route path="/contact/new" element={<Contact mode="create" />} />
+            <Route path="/contact/:id/edit" element={<Contact mode="edit" />} />
           </Route>
         </Route>
 

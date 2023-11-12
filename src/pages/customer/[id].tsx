@@ -27,7 +27,6 @@ const Customer = ({ mode }: { mode: string }) => {
                     <div className="card mb-4">
                         <div className="card-body">
                             <div className="row g-3">
-                                {/* <div className="col-md-12"></div>  */}
                                 <div className="col-md-6">
                                     <label className="form-label">First name</label>
                                     <input type="text" className="form-control" id="customerNameInput" placeholder="Customer first name"

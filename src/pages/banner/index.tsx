@@ -26,7 +26,7 @@ const Banners = () => {
             </nav>
             <div className="mb-4 d-flex align-items-center justify-content-between">
                 <h4 className="fw-bold mb-0">Banners</h4>
-                <button className="btn btn-primary">Create banner</button>
+                <Link to={'/banner/new'} className="btn btn-primary">Create banner</Link>
             </div>
 
             <div className="card">
@@ -46,7 +46,7 @@ const Banners = () => {
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Mark</td>
-                                <td><Link to={'/banner/123'}>Banner name</Link></td>
+                                <td><Link to={'/banner/123/edit'}>Banner name</Link></td>
                                 <td>Something</td>
                                 <td>
                                     <div className="badge badge-center rounded-pill bg-label-danger">
@@ -54,7 +54,7 @@ const Banners = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    <button className="btn btn-success">Edit</button>
+                                    <Link to={'/banner/123/edit'} className="btn btn-success">Edit</Link>
                                 </td>
                             </tr>
                         </tbody>

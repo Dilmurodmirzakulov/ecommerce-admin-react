@@ -26,7 +26,7 @@ const Contacts = () => {
             </nav>
             <div className="mb-4 d-flex align-items-center justify-content-between">
                 <h4 className="fw-bold mb-0">Contacts</h4>
-                <button className="btn btn-danger">Delete</button>
+                <Link to={'/contact/new'} className="btn btn-primary">Create contact</Link>
             </div>
 
             <div className="card">
@@ -43,10 +43,10 @@ const Contacts = () => {
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td><Link to={'/contact/123'}>BRANCH NAME</Link></td>
+                                <td><Link to={'/contact/123/edit'}>BRANCH NAME</Link></td>
                                 <td>PHONE NUMBER</td>
                                 <td>
-                                    <button className="btn btn-success">Edit</button>
+                                    <Link to={'/contact/123/edit'} className="btn btn-success">Edit</Link>
                                 </td>
                             </tr>
                         </tbody>

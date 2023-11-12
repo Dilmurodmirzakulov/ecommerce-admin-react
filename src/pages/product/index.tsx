@@ -54,7 +54,7 @@ const Products = () => {
                                     </div>
                                 </td>
                                 <td>
-                                    <button className="btn btn-success">Edit</button>
+                                    <Link to={'/product/123/edit'} className="btn btn-success">Edit</Link>
                                 </td>
                             </tr>
                         </tbody>

@@ -20,7 +20,7 @@ const Product = ({ mode }: { mode: string }) => {
         </ol>
       </nav>
       <div className="mb-4 d-flex align-items-center justify-content-between">
-        <h4 className="fw-bold mb-0">PRODUCT_NAME</h4>
+        {mode === "edit" && <h4 className="fw-bold mb-0">PRODUCT_NAME</h4>}
         {mode === "edit" && <button className="btn btn-danger">Delete</button>}
       </div>
 

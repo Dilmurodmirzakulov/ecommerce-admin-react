@@ -35,7 +35,8 @@ function App() {
             <Route path="/product/new" element={<Product mode="create" />} />
             <Route path="/product/:id/edit" element={<Product mode="edit" />} />
             <Route path="/customer" element={<Customers />} />
-            <Route path="/customer/:id" element={<Customer />} />
+            <Route path="/customer/new" element={<Customer mode="create" />} />
+            <Route path="/customer/:id/edit" element={<Customer mode="edit" />} />
             <Route path="/order" element={<Orders />} />
             <Route path="/order/:id" element={<Order />} />
             <Route path="/banner" element={<Banners />} />

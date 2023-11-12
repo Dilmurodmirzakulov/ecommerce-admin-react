@@ -12,7 +12,7 @@ const Customers = () => {
         </nav>
         <div className="mb-4 d-flex align-items-center justify-content-between">
             <h4 className="fw-bold mb-0">Customers</h4>
-            <button className="btn btn-danger">Delete</button>
+            <Link to={"/customer/new"} className="btn btn-primary">Create customer</Link>
         </div>
 
         <div className="card">
@@ -29,10 +29,10 @@ const Customers = () => {
                 <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td><Link to={'/customer/123'}>CUSTOMER NAME</Link></td>
+                    <td><Link to={'/customer/123/edit'}>CUSTOMER NAME</Link></td>
                     <td>PHONE NUMBER</td>
                     <td>
-                    <button className="btn btn-success">Edit</button>
+                    <Link to={'/customer/123/edit'} className="btn btn-success">Edit</Link>
                     </td>
                 </tr>
                 </tbody>

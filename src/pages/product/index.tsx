@@ -1,20 +1,28 @@
 import { getProduct } from '../../api';
 import { Link } from 'react-router-dom';
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setProducts } from '../../store/slices/productSlice';
+import { RootState } from '../../store';
 
 const Products = () => {
+    const dispatch = useDispatch()
     const fetchProducts = async () => {
         try {
             let res = await getProduct("uz")
+            dispatch(setProducts(res.data))
             console.log("Products", res)
         } catch (error) {
-            console.log(error)
+            console.log("Fetching products:", error)
         }
     }
 
     useEffect(() => {
         fetchProducts()
     }, [])
+
+    const products = useSelector((state: RootState) => state.productReducer)
+    console.log("products state: ", products)
 
     return (
         <>
@@ -24,7 +32,7 @@ const Products = () => {
                     <li className="breadcrumb-item active" aria-current="page">List</li>
                 </ol>
             </nav>
-            
+
             <div className="mb-4 d-flex align-items-center justify-content-between">
                 <h4 className="fw-bold mb-0">Products</h4>
                 <Link to={"/product/new"} className="btn btn-primary">Create product</Link>

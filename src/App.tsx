@@ -22,6 +22,7 @@ import MainLayout from './layout/mainLayout';
 import RequireAuth from './routes/RequireAuth';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CustomerAddress from './pages/customer/customerAddress/[id]';
+import './utils/i18n';
 
 function App() {
   return (

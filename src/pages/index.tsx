@@ -1,8 +1,12 @@
 import { getProduct } from '../api';
 import { Link } from 'react-router-dom';
 import React, { useEffect } from 'react';
+import LanguageDropdown from '../components/LanguageDropdown';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const { t } = useTranslation();
+
   const fetchProducts = async () => {
     try {
         let res = await getProduct("uz")
@@ -18,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <h4 className="fw-bold mb-4">Dashboard</h4>
+      <h4 className="fw-bold mb-4">{t('dashboard')}</h4>
 
       <div className="row g-3 mb-4">
         <div className="col-md-6">
@@ -34,10 +38,17 @@ const Home = () => {
                 </div>
                 <div className="flex-grow-1">
                   <span className="fw-medium d-block">John Doe</span>
-                  <small className="text-muted">Admin</small>
+                  <small className="text-muted">{t('admin')}</small>
                 </div>
               </div>
-              <button className="btn btn-outline-danger">Sign out</button>
+              <button className="btn btn-outline-danger">{t('sign-out')}</button>
+            </div>
+          </div>
+        </div>
+        <div className='col-md-6'>
+          <div className="card">
+            <div className="card-body p-3">
+              <LanguageDropdown />
             </div>
           </div>
         </div>
@@ -49,11 +60,11 @@ const Home = () => {
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Image</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Visibility</th>
-                <th scope="col">Actions</th>
+                <th scope="col">{t('image')}</th>
+                <th scope="col">{t('name')}</th>
+                <th scope="col">{t('price')}</th>
+                <th scope="col">{t('visibility')}</th>
+                <th scope="col">{t('actions')}</th>
               </tr>
             </thead>
             <tbody>
@@ -61,28 +72,28 @@ const Home = () => {
                 <th scope="row">1</th>
                 <td>Mark</td>
                 <td><Link to={'/product/123/edit'}>PRODUCT NAME</Link></td>
-                <td>PRICE</td>
+                <td>20000</td>
                 <td>
                   <div className="badge badge-center rounded-pill bg-label-danger">
                     <i className='bx bx-x-circle'></i>
                   </div>
                 </td>
                 <td>
-                  <Link to={'/product/123/edit'} className="btn btn-success">Edit</Link>
+                  <Link to={'/product/123/edit'} className="btn btn-success">{t('edit')}</Link>
                 </td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>Mark</td>
                 <td><Link to={'/product/123/edit'}>PRODUCT NAME</Link></td>
-                <td>PRICE</td>
+                <td>20000</td>
                 <td>
                   <div className="badge badge-center rounded-pill bg-label-success">
                     <i className='bx bx-check-circle'></i>
                   </div>
                 </td>
                 <td>
-                  <Link to={'/product/123/edit'} className="btn btn-success">Edit</Link>
+                  <Link to={'/product/123/edit'} className="btn btn-success">{t('edit')}</Link>
                 </td>
               </tr>
             </tbody>

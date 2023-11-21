@@ -1,27 +1,30 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const Order = ({ mode }: { mode: string }) => {
+  const { t } = useTranslation();
+
   return (
     <>
         <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                    <Link to={'/order'}>Orders</Link>
+                    <Link to={'/order'}>{t('orders')}</Link>
                 </li>
-                {mode === "create" && <li className="breadcrumb-item active" aria-current="page">Create</li>}
+                {mode === "create" && <li className="breadcrumb-item active" aria-current="page">{t('create')}</li>}
                 {mode === "edit" &&
                     <>
-                        <li className="breadcrumb-item"><Link to={'/order/123/edit'}>ORDER_NUMBER</Link></li>
-                        <li className="breadcrumb-item active" aria-current="page">Edit</li>
+                        <li className="breadcrumb-item"><Link to={'/order/123/edit'}>1234</Link></li>
+                        <li className="breadcrumb-item active" aria-current="page">{t('edit')}</li>
                     </>
                 }
             </ol>
         </nav>
 
         <div className="mb-4 d-flex align-items-center justify-content-between">
-            {mode === "edit" && <h4 className="fw-bold mb-0">ORDER_NUMBER</h4>}
-            {mode === "edit" && <button className="btn btn-danger">Delete</button>}
+            {mode === "edit" && <h4 className="fw-bold mb-0">1234</h4>}
+            {mode === "edit" && <button className="btn btn-danger">{t('delete')}</button>}
         </div>
 
         <div className="row g-3">
@@ -30,21 +33,21 @@ const Order = ({ mode }: { mode: string }) => {
                     <div className="card-body">
                         <div className="row g-3">
                         <div className="col-md-6">
-                            <label className="form-label">Number</label>
+                            <label className="form-label">{t('number')}</label>
                             <input
                             type="text"
                             className="form-control"
                             id="customerNumberInput"
-                            placeholder="Number"
+                            placeholder={t('number')}
                             aria-describedby="defaultFormControlHelp" />
                         </div>
                         <div className="col-md-6">
-                            <label className="form-label">Customer *</label>
+                            <label className="form-label">{t('customer')}</label>
                             <input
                             type="text"
                             className="form-control"
                             id="customerFullNameInput"
-                            placeholder="Customer Full Name"
+                            placeholder={t('customer-full-name')}
                             aria-describedby="defaultFormControlHelp" />
                         </div>
                         <div className="col-md-6">
@@ -66,7 +69,7 @@ const Order = ({ mode }: { mode: string }) => {
                             aria-describedby="defaultFormControlHelp" />
                         </div>
                         <div className="col-md-12">
-                            <label className="form-label">Address</label>
+                            <label className="form-label">{t('address')}</label>
                             <input
                             type="text"
                             className="form-control"
@@ -83,7 +86,7 @@ const Order = ({ mode }: { mode: string }) => {
                             placeholder="Product Description"></textarea>
                         </div>
                         <div className="col-md-6">
-                        <label className="form-label">Address</label>
+                        <label className="form-label">{t('address')}</label>
                         <input type="text" className="form-control" id="customerAddressInput" placeholder="Customer address"
                             aria-describedby="defaultFormControlHelp" />
                         </div>
@@ -95,11 +98,11 @@ const Order = ({ mode }: { mode: string }) => {
                 <div className="card">
                 <div className="card-body">
                     <div className="mb-4">
-                    <label className="form-label">Created at</label>
+                    <label className="form-label">{t('created-at')}</label>
                     <div>03.02.2023</div>
                     </div>
                     <div>
-                    <label className="form-label">Last modified at</label>
+                    <label className="form-label">{t('last-modified-at')}</label>
                     <div>03.02.2023</div>
                     </div>
                 </div>
@@ -236,8 +239,8 @@ const Order = ({ mode }: { mode: string }) => {
         </div>
 
         <div className="mb-4">
-            <button className="btn btn-primary me-3">Save Changes</button>
-            <button className="btn btn-secondary">Cancel</button>
+            <button className="btn btn-primary me-3">{t('save-edits')}</button>
+            <button className="btn btn-secondary">{t('cancel')}</button>
         </div>
     </>
   )

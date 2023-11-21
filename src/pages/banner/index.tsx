@@ -1,8 +1,11 @@
 import { getSlider } from '../../api';
 import { Link } from 'react-router-dom';
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Banners = () => {
+  const { t } = useTranslation();
+
     const fetchBanners = async () => {
         try {
             let res = await getSlider("uz")
@@ -20,14 +23,14 @@ const Banners = () => {
         <>
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><Link to={'/banner'}>Banners</Link></li>
-                    <li className="breadcrumb-item active" aria-current="page">List</li>
+                    <li className="breadcrumb-item"><Link to={'/banner'}>{t('banners')}</Link></li>
+                    <li className="breadcrumb-item active" aria-current="page">{t('list')}</li>
                 </ol>
             </nav>
             
             <div className="mb-4 d-flex align-items-center justify-content-between">
-                <h4 className="fw-bold mb-0">Banners</h4>
-                <Link to={'/banner/new'} className="btn btn-primary">Create banner</Link>
+                <h4 className="fw-bold mb-0">{t('banners')}</h4>
+                <Link to={'/banner/new'} className="btn btn-primary">{t('create-banners')}</Link>
             </div>
 
             <div className="card">
@@ -36,26 +39,26 @@ const Banners = () => {
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Visibility</th>
-                                <th scope="col">Actions</th>
+                                <th scope="col">{t('image')}</th>
+                                <th scope="col">{t('name')}</th>
+                                <th scope="col">{t('description')}</th>
+                                <th scope="col">{t('visibility')}</th>
+                                <th scope="col">{t('actions')}</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Mark</td>
-                                <td><Link to={'/banner/123/edit'}>Banner name</Link></td>
-                                <td>Something</td>
+                                <td><Link to={'/banner/123/edit'}>Banner nomi</Link></td>
+                                <td>Banner tavsifi</td>
                                 <td>
                                     <div className="badge badge-center rounded-pill bg-label-danger">
                                         <i className='bx bx-x-circle'></i>
                                     </div>
                                 </td>
                                 <td>
-                                    <Link to={'/banner/123/edit'} className="btn btn-success">Edit</Link>
+                                    <Link to={'/banner/123/edit'} className="btn btn-success">{t('edit')}</Link>
                                 </td>
                             </tr>
                         </tbody>

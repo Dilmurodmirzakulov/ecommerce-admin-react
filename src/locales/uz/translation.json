@@ -1,0 +1,87 @@
+{
+    "banners": "Bannerlar",
+    "dashboard": "Boshqaruv paneli",
+    "admin": "Admin",
+    "sign-out": "Chiqish",
+    "image": "Rasm",
+    "name": "Ism",
+    "price": "Narx",
+    "visibility": "Ko'rinish",
+    "actions": "Harakatlar",
+    "edit": "Tahrirlash",
+    "create": "Yaratmoq",
+    "delete": "O'chirmoq",
+    "visible": "Ko'rinadigan",
+    "shop": "Do'kon",
+    "products": "Mahsulotlar",
+    "customers": "Xaridorlar",
+    "orders": "Buyurtmalar",
+    "content": "Tarkib",
+    "contacts": "Kontaktlar",
+    "payments": "To'lovlar",
+    "authors": "Mualliflar",
+    "images": "Rasmlar",
+    "save-edits": "O'zgarishlarni saqlash",
+    "cancel": "Bekor qilish",
+    "list": "Roʻyxat",
+    "create-banners": "Banner yaratish",
+    "description": "Tavsif",
+    "phone": "Telefon",
+    "phone-number": "Telefon raqami",
+    "branch-name": "Filial nomi",
+    "create-contact": "Kontakt yaratish",
+    "addresses": "Manzillar",
+    "address": "Manzil",
+    "created-at": "Yaratilgan",
+    "last-modified-at": "Oxirgi tahrirlangan",
+    "add-address": "Manzil qo'shish",
+    "first-name": "Ism",
+    "last-name": "Familiya",
+    "create-customer": "Xaridor yaratish",
+    "number": "Son",
+    "customer": "Xaridor *",
+    "customer-full-name": "Xaridor to'liq ismi"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
